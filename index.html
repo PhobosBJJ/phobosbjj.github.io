@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Phobos Performance — Private Grappling, Boxing &amp; Strength Coaching</title>
 <meta name="description" content="Private no-gi grappling, boxing and strength &amp; conditioning coaching. Built for composure under pressure, and clients who train for the long game.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,6 +79,7 @@
   }
   .header-inner{
     max-width:var(--container); margin:0 auto; padding:18px 32px;
+    padding-top:max(18px, env(safe-area-inset-top));
     display:flex; align-items:center; justify-content:space-between;
   }
   .brand{ display:flex; align-items:center; gap:12px; }
@@ -237,25 +238,19 @@
 
   /* ---------- responsive ---------- */
   @media (max-width:900px){
-    .hero{ grid-template-columns:1fr; min-height:auto; padding-top:48px; }
+    .hero{ grid-template-columns:1fr; min-height:auto; padding-top:32px; }
     .hero-copy{ padding-bottom:36px; }
-    .hero-figure{ order:-1; max-height:50vh; overflow:hidden; }
-    .hero-figure img{ max-width:340px; margin:0 auto; }
+    .hero-figure{ order:-1; align-items:flex-start; max-height:none; overflow:visible; }
+    .hero-figure img{ max-width:300px; margin:0 auto; }
     .about-grid{ grid-template-columns:1fr; gap:36px; }
     .about-photo{ max-width:320px; }
     .service-grid{ grid-template-columns:1fr; }
     form#inquiry-form{ grid-template-columns:1fr; }
   }
   @media (max-width:760px){
-    nav.primary-nav{
-      position:fixed; inset:0; top:64px; background:var(--obsidian);
-      transform:translateY(-110%); transition:transform .35s ease; z-index:40;
-      padding:40px 32px; border-top:1px solid var(--line);
-    }
-    nav.primary-nav.open{ transform:translateY(0); }
-    nav.primary-nav ul{ flex-direction:column; gap:26px; }
-    nav.primary-nav a{ font-size:18px; }
-    .nav-toggle{ display:flex; }
+    /* Single-page site on mobile: drop the nav entirely, just the brand mark remains in the header */
+    nav.primary-nav, .nav-toggle{ display:none; }
+    .header-inner{ justify-content:center; }
     .accolades li{ grid-template-columns:1fr; gap:6px; }
   }
 </style>
