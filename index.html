@@ -121,7 +121,7 @@
     position:relative; z-index:1;
     max-width:var(--container); margin:0 auto; padding:64px 32px 0;
     display:grid; grid-template-columns:1.05fr 0.95fr; align-items:end; gap:24px;
-    min-height:88vh;
+    min-height:clamp(560px, 82vh, 780px);
   }
   .hero-copy{ padding-bottom:88px; }
   .hero-copy .eyebrow{ margin-bottom:22px; display:block; }
@@ -207,7 +207,7 @@
   .accolades .desc{ font-size:14.5px; color:var(--parchment); }
 
   /* ---------- contact ---------- */
-  .contact{ position:relative; z-index:1; max-width:880px; margin:0 auto; padding:10px 32px 110px; }
+  .contact{ position:relative; z-index:1; max-width:880px; margin:0 auto; padding:10px 32px 30px; }
   .contact h2{ font-size:clamp(28px,3.6vw,38px); text-align:center; }
   .contact > p{ text-align:center; color:var(--stone); max-width:52ch; margin:18px auto 50px; }
   form#inquiry-form{ display:grid; grid-template-columns:1fr 1fr; gap:22px 24px; }
