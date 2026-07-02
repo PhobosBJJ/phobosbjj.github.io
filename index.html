@@ -18,7 +18,7 @@
   "description": "Private no-gi grappling, boxing and strength & conditioning coaching for adults, delivered by a competition-proven coach.",
   "url": "https://phobosperformance.com/",
   "logo": "https://phobosperformance.com/logo.png",
-  "email": "phobosbjj@pm.me",
+  "email": "info@phobosperformance.com",
   "priceRange": "\u00a3\u00a3",
   "address": {
     "@type": "PostalAddress",
@@ -457,7 +457,7 @@
       </div>
       <div class="form-actions">
         <button type="submit" class="btn-primary" id="submit-btn">Send Inquiry</button>
-        <span class="form-note" id="form-note">Prefer to write directly? <a href="mailto:phobosbjj@pm.me">phobosbjj@pm.me</a></span>
+        <span class="form-note" id="form-note">Prefer to write directly? <a href="mailto:info@phobosperformance.com">info@phobosperformance.com</a></span>
       </div>
     </form>
   </section>
@@ -554,14 +554,14 @@
           return response.json().then(function(data){
             var msg = (data && data.errors && data.errors.length)
               ? data.errors.map(function(err){ return err.message; }).join(', ')
-              : 'Something went wrong sending that. Please try again, or email phobosbjj@pm.me directly.';
+              : 'Something went wrong sending that. Please try again, or email info@phobosperformance.com directly.';
             note.textContent = msg;
             note.classList.add('is-error');
           });
         }
       })
       .catch(function(){
-        note.textContent = 'Couldn\'t reach the server. Please email phobosbjj@pm.me directly.';
+        note.textContent = 'Couldn\'t reach the server. Please email info@phobosperformance.com directly.';
         note.classList.add('is-error');
       })
       .finally(function(){
